@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
+	xmlns:layout="http://www.w3.org/1999/xhtml"
+	layout:decorate="~{fragments/user/main_layout}">
+<head>
+<meta charset="UTF-8">
+<title>Dịch Vụ</title>
+</head>
+<body>
+	<div layout:fragment="content" class="main main-raised">
+	<div class="container">
+      <div class="section">
+        <div class="row">
+         <div class="col-md-6" th:each="ser : ${service}">
+            <div class="card card-raised card-background" th:style="'background-image: url(/assets/img/' + ${ser.images} + ');min-height:303px'">
+            
+              <div class="card-body">
+                <h6 class="card-category text-info">Dịch vụ</h6>
+                <a href="#pablo">
+                  <h3 class="card-title" th:text="${ser.name}">Name</h3>
+                </a>
+                <p class="card-description" th:text="${ser.description}">
+                  
+                </p>
+                <a th:href="@{'/dichvu/' + ${ser.id}}" class="btn btn-danger btn-round">
+                  <i class="material-icons">format_align_left</i> Xem
+                </a>
+              </div>
+            </div>
+          </div>
+          <div style="margin-left: 200px">
+								Hiện [[${totalItemsInpage}]] / [[${totalItems}]] tổng dịch vụ -
+								Trang [[${currentpage}]] / [[${totalPages}]] :
+								&nbsp;
+								<a th:if="${currentpage > 1}" th:href="@{/dichvu-page/1}">Đầu trang</a>
+								<span th:unless="${currentpage > 1}">Đầu trang</span>
+								&nbsp;
+								<a th:if="${currentpage > 1}" th:href="@{'/dichvu-page/' + ${currentpage - 1}}">Trang trước</a>
+								<span th:unless="${currentpage > 1}">Trang trước</span>
+								&nbsp;
+								<span
+									th:each="i: ${#numbers.sequence(1, totalPages)}">
+									<span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<a 
+										th:if="${i != currentpage}"
+										th:href="@{'/dichvu-page/' + ${i}}">[[${i}]]
+									</a>
+										<span th:unless="${i != currentpage}">[[${i}]]</span>
+								</span>
+								
+								</span>
+								&nbsp;
+								
+								&nbsp;
+								<a th:if="${currentpage < totalPages}" th:href="@{'/dichvu-page/' + ${currentpage + 1}}">Trang sau</a>
+								<span th:unless="${currentpage < totalPages}">Trang sau</span>
+								&nbsp;
+								<a th:if="${currentpage < totalPages}" th:href="@{'/dichvu-page/' + ${totalPages}}">Trang cuối</a>
+								<span th:unless="${currentpage < totalPages}">Trang cuối</span>
+							</div>
+          
+          
+        </div>
+      </div>
+      
+    </div>
+	</div>
+</body>
+</html>

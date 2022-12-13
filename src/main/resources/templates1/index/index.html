@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
+	xmlns:layout="http://www.w3.org/1999/xhtml"
+	layout:decorate="~{fragments/user/main_layout}">
+<head>
+<meta charset="UTF-8">
+<title>Trang chủ</title>
+</head>
+<body class="about-us sidebar-collapse">
+	<div layout:fragment="content" class="main main-raised">
+		<div class="container">
+		<div class="alert alert-success text-center" role="alert" th:text="${success}" th:if="${success}"></div>
+      <div class="about-description text-center">
+        <div class="row">
+          <div class="col-md-8 ml-auto mr-auto">
+            <h5 class="description"><b>PetCare</b> là cửa hàng bán đồ dùng, thức ăn, phụ kiện cho thú cưng tại Sài Gòn, được thành lập từ tháng 10/2020 được sự tin tưởng của khách hàng trong suốt thời gian hoạt động đến nay 
+            cửa hàng ngày càng một phát triển và xây dựng được thương hiệu trong lòng quý khách.</h5>
+          </div>
+        </div>
+      </div>
+      <div class="about-team team-1">
+        <div class="row">
+          <div class="col-md-8 ml-auto mr-auto text-center">
+            <h2 class="title">Đội ngũ nhân viên</h2>
+            <h5 class="description">Đội ngũ nhân viên của chúng tôi là những người trẻ trung, nhiệt huyết, giỏi về chuyên môn, tận tình với công việc, luôn đoàn kết gắn bó làm nền tảng cho sự phát triển.
+            Đến với PetCare quý khách sẽ thấy sự tận tình, chu đáo và phong cách phục vụ chuyên nghiệp của đội ngũ chúng tôi.</h5>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card card-profile card-plain">
+              <div class="card-avatar">
+                <a href="#pablo">
+                  
+                </a>
+              </div>
+              <div class="card-body">
+                <h4 class="card-title">Nguyễn Quốc Phong</h4>
+                <h6 class="category text-muted">Trưởng khoa</h6>
+                <p class="card-description">
+                  Làm việc Làm việc Làm việc Làm việc Làm việc Làm việc Làm việc 
+                </p>
+              </div>
+              
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card card-profile card-plain">
+              <div class="card-avatar">
+                <a href="#pablo">
+                  
+                </a>
+              </div>
+              <div class="card-body">
+                <h4 class="card-title">Nguyễn Hoàng Minh</h4>
+                <h6 class="category text-muted">Bác sĩ phẩu thuật</h6>
+                <p class="card-description">
+                  Làm việc Làm việc Làm việc Làm việc Làm việc Làm việc Làm việc Làm việc 
+                </p>
+              </div>
+              
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card card-profile card-plain">
+              <div class="card-avatar">
+                <a href="#pablo">
+                  <img class="img" src="../assets/img/thinhava.jpg">
+                </a>
+              </div>
+              <div class="card-body">
+                <h4 class="card-title">Tạ Huy Thinh</h4>
+                <h6 class="category text-muted">Bác sĩ chỉnh hình</h6>
+                <p class="card-description">
+                 Làm việc Làm việc Làm việc Làm việc Làm việc Làm việc Làm việc Làm việc Làm việc 
+                </p>
+              </div>
+              
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card card-profile card-plain">
+              <div class="card-avatar">
+                <a href="#pablo">
+                  
+                </a>
+              </div>
+              <div class="card-body">
+                <h4 class="card-title">Hồ Trần Bảo Châu</h4>
+                <h6 class="category text-muted">Y tá 1</h6>
+                <p class="card-description">
+                  Thăm ngàn thăm ngàn thăm ngàn Thăm ngàn thăm ngàn thăm ngàn Thăm ngàn thăm ngàn thăm ngàn
+                </p>
+              </div>
+              
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card card-profile card-plain">
+              <div class="card-avatar">
+                <a href="#pablo">
+                  
+                </a>
+              </div>
+              <div class="card-body">
+                <h4 class="card-title">Nguyễn Huy Hoàng</h4>
+                <h6 class="category text-muted">Y tá 2</h6>
+                <p class="card-description">
+                 Thăm ngàn thăm ngàn thăm ngàn Thăm ngàn thăm ngàn thăm ngàn Thăm ngàn thăm ngàn thăm ngàn
+                </p>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="projects-3 section-dark" id="projects-3">
+        
+          <div class="row">
+            <div class="col-md-8 ml-auto mr-auto text-center">
+              <h6 class="category text-muted">Công việc của chúng tôi</h6>
+              <h2 class="title">Hình ảnh tại phòng khám</h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-5 ml-auto">
+              <div class="card card-plain">
+                <a href="#pablo">
+                  <div class="card-header card-header-image">
+                    <img src="../assets/img/ser1.jpg">
+                  </div>
+                </a>
+                <div class="card-body ">
+                  <h6 class="card-category">Tiêm ngừa</h6>
+                  <a href="#pablo">
+                    <h4 class="card-title">Chích vacxin ngừa COVID</h4>
+                  </a>
+                  
+                </div>
+              </div>
+            </div>
+            <div class="col-md-5 mr-auto">
+              <div class="card card-plain">
+                <a href="#pablo">
+                  <div class="card-header card-header-image">
+                    <img src="../assets/img/ser2.jpg">
+                  </div>
+                </a>
+                <div class="card-body ">
+                  <h6 class="card-category">Phẫu thuật</h6>
+                  <a href="#pablo">
+                    <h4 class="card-title">Chuyển giới thú cưng</h4>
+                  </a>
+                  
+                </div>
+              </div>
+            </div>
+            <div class="col-md-5 ml-auto">
+              <div class="card card-plain">
+                <a href="#pablo">
+                  <div class="card-header card-header-image">
+                    <img src="../assets/img/ser3.jpg">
+                  </div>
+                </a>
+                <div class="card-body ">
+                  <h6 class="card-category">Khám bệnh</h6>
+                  <a href="#pablo">
+                    <h4 class="card-title">Kiểm tra răng miệng</h4>
+                  </a>
+                  
+                </div>
+              </div>
+            </div>
+            <div class="col-md-5 mr-auto">
+              <div class="card card-plain">
+                <a href="#pablo">
+                  <div class="card-header card-header-image">
+                    <img src="../assets/img/ser4.jpg">
+                  </div>
+                </a>
+                <div class="card-body ">
+                  <h6 class="card-category">Làm đẹp</h6>
+                  <a href="#pablo">
+                    <h4 class="card-title">Kẻ mắt cho thú cưng đi party</h4>
+                  </a>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        
+      </div>
+      <div class="about-office section-dark">
+        <div class="row text-center">
+          <div class="col-md-8 ml-auto mr-auto">
+            <h2 class="title">Chó là bạn</h2>
+            <h4 class="description">Hãy cùng nhau tận hưởng những phút giây hạnh phúc bên cạnh thú cưng của bạn</h4>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <img class="img-raised rounded img-fluid" alt="Raised Image" src="../assets/img/blog1.jpg">
+          </div>
+          <div class="col-md-4">
+            <img class="img-raised rounded img-fluid" alt="Raised Image" src="../assets/img/blog2.jpg">
+          </div>
+          <div class="col-md-4">
+            <img class="img-raised rounded img-fluid" alt="Raised Image" src="../assets/img/blog3.jpg">
+          </div>
+          <div class="col-md-6">
+            <img class="img-raised rounded img-fluid" alt="Raised Image" src="../assets/img/blog4.jpg">
+          </div>
+          <div class="col-md-6">
+            <img class="img-raised rounded img-fluid" alt="Raised Image" src="../assets/img/blog5.jpg">
+          </div>
+        </div>
+      </div>
+      <div class="about-contact ">
+        <div class="row">
+          
+        </div>
+      </div>
+    </div>
+			
+		</div>
+	</div>
+
+</body>
+</html>
